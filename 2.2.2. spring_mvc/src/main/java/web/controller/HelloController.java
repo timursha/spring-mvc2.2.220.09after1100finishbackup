@@ -24,8 +24,8 @@ public class HelloController {
 		model.addAttribute("messages", messages);
 		return "index";
 	}
-	@GetMapping(value = "/cars")
-	public String printCars(@RequestParam(value = "locale", required = true) String par, HttpServletRequest request, ModelMap model) {
+	@GetMapping(value = "cars")
+	public String printCars(@RequestParam(value = "locale", required = false) String par, HttpServletRequest request, ModelMap model) {
 		ServiseCar serviseCar = new ServiseCar();
 		List<Car> carsList;
 		carsList = serviseCar.getListOfCars();
@@ -40,7 +40,7 @@ public class HelloController {
 		color = "цвет";
 		year = "год";
 
-		if (par.equals("en")){
+		if (par != null && par.equals("en")){
 			title = "CARS";
 			carModel = "model";
 			color = "color";
