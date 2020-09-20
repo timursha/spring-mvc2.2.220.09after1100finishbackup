@@ -41,4 +41,16 @@ public class UserController {
         userDao.save(user);
         return "redirect:/users";
     }
+//    //additional methods
+//    @PostMapping("/edituser")
+//    public String updateUser(@ModelAttribute User user) {
+//        userServiceEntityImpl.updateUser(user);
+//        return "redirect:/users";
+//    }
+//
+//    @GetMapping("/remove/{id}")
+//    public String removeUser(@PathVariable long id) {
+//        userServiceEntityImpl.removeUserById(id);
+//        return "redirect:/users";
+//    }
 }

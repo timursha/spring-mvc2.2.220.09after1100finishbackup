@@ -28,5 +28,8 @@ public class UserDao {
         user.setId(++STATIC_COUNT);
         users.add(user);
     }
+    public void changeUser(User user){
+
+    }
 
 }
